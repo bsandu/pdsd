@@ -4,5 +4,6 @@
     <string name="app_name">Phone Dialer</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="phone_error">No phone number entered</string>
 
 </resources>

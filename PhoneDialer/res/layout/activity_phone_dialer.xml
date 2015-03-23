@@ -9,6 +9,7 @@
     tools:context="ro.pub.cs.systems.pdsd.lab03.phonedialer.PhoneDialerActivity" >
 
     <GridLayout
+        android:id="@+id/gridLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:columnCount="4" >
@@ -22,7 +23,6 @@
             android:layout_row="0"
             android:layout_rowSpan="2"
             android:inputType="phone" >
-
         </EditText>
 
         <ImageButton
@@ -34,6 +34,7 @@
     </GridLayout>
 
     <TableLayout
+        android:id="@+id/tableLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -59,7 +60,6 @@
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:src="@drawable/hangup" />
-
         </TableRow>
 
         <TableRow
@@ -90,14 +90,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="3" />
-
         </TableRow>
 
         <TableRow
             android:id="@+id/tableRow2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
-            
+
             <Button
                 android:id="@+id/button4"
                 style="?android:attr/buttonStyleSmall"
@@ -121,14 +120,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="6" />
-            
         </TableRow>
 
         <TableRow
             android:id="@+id/tableRow3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
-            
+
             <Button
                 android:id="@+id/button7"
                 style="?android:attr/buttonStyleSmall"
@@ -152,14 +150,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="9" />
-            
         </TableRow>
 
         <TableRow
             android:id="@+id/tableRow4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
-            
+
             <Button
                 android:id="@+id/buttons"
                 style="?android:attr/buttonStyleSmall"
@@ -183,9 +180,15 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="#" />
-            
         </TableRow>
-
     </TableLayout>
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tableLayout1"
+        android:layout_centerHorizontal="true"
+        android:text="Add to contacts" />
 
 </RelativeLayout>

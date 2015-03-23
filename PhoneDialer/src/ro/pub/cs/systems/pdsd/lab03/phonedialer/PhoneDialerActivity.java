@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PhoneDialerActivity extends Activity {
 	private class ButtonClickListener implements Button.OnClickListener {
@@ -33,6 +34,16 @@ public class PhoneDialerActivity extends Activity {
 			}
 			else if(v.getId() == R.id.imageButtonh){
 				finish();
+			}
+			else if(v.getId() == R.id.button10){
+				if (edt.getText().toString().length() > 0) {
+					  Intent intent = new Intent("ro.pub.cs.systems.pdsd.lab04.contactsmanager.intent.action.ContactsManagerActivity");
+					  intent.putExtra("ro.pub.cs.systems.pdsd.lab04.contactsmanager.PHONE_NUMBER_KEY", edt.getText().toString());
+					  startActivityForResult(intent, 2015);
+					} 
+				else {
+					  Toast.makeText(getApplication(), getResources().getString(R.string.phone_error), Toast.LENGTH_LONG).show();
+				}
 			}
 			else{
 				Button x = (Button)findViewById(v.getId());
@@ -75,6 +86,8 @@ public class PhoneDialerActivity extends Activity {
 		bs.setOnClickListener(buttonClickListener);
 		Button bd = (Button)findViewById(R.id.buttond);
 		bd.setOnClickListener(buttonClickListener);
+		Button b10 = (Button)findViewById(R.id.button10);
+		b10.setOnClickListener(buttonClickListener);
 		
 		ImageButton bc = (ImageButton)findViewById(R.id.imageButtonc);
 		bc.setOnClickListener(buttonClickListener);

@@ -72,6 +72,13 @@
                         android:layout_weight="1"
                         android:src="@drawable/hangup" />
                 </TableRow>
+
+                <Button
+                    android:id="@+id/button10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add to contacts" />
+
             </TableLayout>
 
             <TableLayout
